@@ -6,8 +6,8 @@
 	<title>Rekrutacja</title>
 </svelte:head>
 
-<div class="flex m-10 p-10" in:fly>
-	<div class="w-1/2">
+<div class="flex p-5 flex-col xl:flex-row items-center xl:items-start" in:fly>
+	<div class="xl:w-1/2 m-10 ">
 		<h1 class="text-4xl my-2">Rekrutacja</h1>
 		<p class="my-4">
 			Nie wymagamy również żadnej aktywności. Nie musisz się nam tłumaczyć, dlaczego nie przyszedłeś
@@ -18,7 +18,7 @@
 			Posiadamy własny serwer do ARMA III, Teamspeaka oraz przejrzysty Discord.
 		</p>
 	</div>
-	<div class="w-1/2 flex justify-center">
+	<div class="xl:w-1/2 flex justify-center m-10 ">
 		<iframe
 			title="test"
 			src="https://discord.com/widget?id=683297320124678162&theme=dark"

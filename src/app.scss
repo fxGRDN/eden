@@ -137,27 +137,15 @@
   }
 }
 
-.img_trap_fade {
-  mask-image: -webkit-gradient(linear, right bottom, left top,  from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
+
 
 .hide {
   max-height: 0;
 }
 
-.about {
-  position: relative;
-}
-
-.about::after {
-  position: absolute;
-  content: '';
-  background-color: #480000;
-  height: 100%;
-  width: 1.5px;
-  left: 0;
-  top: 0;
-  transform: rotate(20deg);
-
+@media (min-width: 1280px) {
+  .img_trap_fade {
+    mask-image: -webkit-gradient(linear, right bottom, left top,  from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
 }

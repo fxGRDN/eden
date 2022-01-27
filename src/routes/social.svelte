@@ -1,54 +1,23 @@
 <script lang="ts">
-import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	import { fly } from 'svelte/transition';
-
-	// var reqURL =
-	// 			'https://api.rss2json.com/v1/api.json?rss_url=' +
-	// 			encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=');
-	// 		function loadVideo(iframe) {
-	// 			$.getJSON(reqURL + iframe.getAttribute('cid'), function (data) {
-	// 				var videoNumber = iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0;
-	// 				console.log(videoNumber);
-	// 				var link = data.items[videoNumber].link;
-	// 				id = link.substr(link.indexOf('=') + 1);
-	// 				iframe.setAttribute('src', 'https://youtube.com/embed/' + id + '?controls=0&autoplay=1');
-	// 			});
-	// 		}
-	// 		var iframes = document.getElementsByClassName('latestVideoEmbed');
-	// 		for (var i = 0, len = iframes.length; i < len; i++) {
-	// 			loadVideo(iframes[i]);
-	// 		}
-
-	let reqURL = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=');
-	let channelId = 'UCYCTedumMPKNCN2hATjJz2w';
-	let ytFilm;
-
-	const loadVid = (frame: HTMLIFrameElement) => {
-		fetch(reqURL + channelId)
-		.then( res => {return res.json()})
-		.then( res =>  frame.setAttribute('src', res.items[0].link));
-	}  
-	onMount(() => {
-		loadVid(ytFilm);
-	})
-
 </script>
 
 <svelte:head>
 	<title>Social media</title>
 </svelte:head>
 
-<div class="flex h-auto" in:fly>
-	<div class="w-1/2">
+<div class="flex xl:flex-row flex-col-reverse items-center" in:fly>
+	<div class="xl:w-1/2 w-full m-y-10 scale-75 md:scale-100 ">
 		<blockquote
 			class="tiktok-embed"
-            loading="lazy"
+			loading="lazy"
 			cite="https://www.tiktok.com/@pr0ject_eden/video/7047865245422980357"
 			data-video-id="7047865245422980357"
-			style="max-width: 605px;min-width: 325px; background-color:black"
+			style="max-width: 625px; min-width: 320px"
 		>
-			<section>
+			<section class="hidden">
 				<a target="_blank" title="@pr0ject_eden" href="https://www.tiktok.com/@pr0ject_eden"
 					>@pr0ject_eden</a
 				>
@@ -84,15 +53,17 @@ import { onMount } from 'svelte';
 		</blockquote>
 		<script async src="https://www.tiktok.com/embed.js"></script>
 	</div>
-	<div class="w-1/2 flex items-center">
+
+
+	
+	<div class="xl:w-1/2 flex items-center m-10 scale-50 md:scale-100">
 		<iframe
-			bind:this="{ytFilm}"
-            loading="lazy"
-            title="xd"
-			class="latestVideoEmbed"
-			width="600"
-			height="340"
+			width="560"
+			height="315"
+			src="https://www.youtube-nocookie.com/embed/YMS5aLzp3UQ?controls=0"
+			title="YouTube video player"
 			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen
 		/>
 	</div>

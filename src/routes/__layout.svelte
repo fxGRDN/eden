@@ -6,7 +6,7 @@
 </script>
 
 
-<div class="bg-black h-screen box-border overflow-y-hidden text-white max-h-screen">
+<div class="bg-black min-h-screen box-border overflow-y-hidden text-white">
     <Nav/>
     <slot/>
     <Footer/>
