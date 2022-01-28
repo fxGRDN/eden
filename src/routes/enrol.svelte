@@ -21,7 +21,7 @@
 	<div class="xl:w-1/2 flex justify-center m-10 ">
 		<iframe
 			title="test"
-			src="https://discord.com/widget?id=683297320124678162&theme=dark"
+			src="https://discord.com/widget?id=900079972008472697&theme=dark"
 			width="350"
 			height="500"
 			frameborder="0"
