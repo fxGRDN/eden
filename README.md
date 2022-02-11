@@ -2,7 +2,7 @@
 
 ## To make it work just type 
 ```
-npm start
+npm run start
 ```
 
 ## To build docker image
