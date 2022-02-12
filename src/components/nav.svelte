@@ -26,6 +26,8 @@
 
     const glitchRand = (time: number) => {
         let ele = menu.children[randInt(0,3)].firstElementChild;
+        // console.log(ele);
+        
         ele.classList.toggle('glitch-ele');
         setTimeout( () => {
             ele.classList.toggle('glitch-ele');

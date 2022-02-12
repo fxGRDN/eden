@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { afterUpdate, onMount } from 'svelte';
+	import { afterUpdate } from 'svelte';
 	import { ImgSlider } from '../scripts/imgSlider';
 	import { fly } from 'svelte/transition';
 
@@ -34,11 +34,6 @@
 
 	<div bind:this={imgContainer} class="xl:w-3/5 m-y-10  xl:h-160 md:h-128 img_trap_fade about">
 		<div class="h-full w-full flex justify-center items-center">
-			<svg>
-				<circle cx="50" cy="50" fill="none" stroke="#e15b64" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
-					<animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
-				  </circle>
-			</svg>
 		</div>
 	</div>
 </div>
